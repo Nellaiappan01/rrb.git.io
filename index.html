@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Quiz Question</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+    <h2 id="pageTitle">Nellai RRB</h2>
+
+      <form id="quizForm">
+        <!-- Category -->
+        <div class="form-group">
+          <select name="category" required>
+            <option value="">Select Category ⬇️</option>
+            <option value="Aptitude">Aptitude</option>
+            <option value="Reasoning">Reasoning</option>
+            <option value="Science">Science</option>
+            <option value="General Awareness">General Awareness</option>
+          </select>
+        </div>
+
+        <!-- Question -->
+        <div class="form-group hint-group">
+          <textarea name="question" placeholder="Type your question 💭" required></textarea>
+          <span class="hint-icon">💡</span>
+          <div class="hint-text">Keep it short & clear</div>
+        </div>
+
+        <!-- Options -->
+        <div class="grid">
+          <input type="text" name="optionA" placeholder="Option A" required>
+          <input type="text" name="optionB" placeholder="Option B" required>
+          <input type="text" name="optionC" placeholder="Option C" required>
+          <input type="text" name="optionD" placeholder="Option D" required>
+        </div>
+
+        <!-- Correct Option -->
+        <div class="form-group hint-group">
+          <select name="correctOption" id="correctOption" required>
+            <option value="">Select Correct Option ✅</option>
+            <option value="A">Option A</option>
+            <option value="B">Option B</option>
+            <option value="C">Option C</option>
+            <option value="D">Option D</option>
+          </select>
+          <span class="hint-icon">💡</span>
+          <div class="hint-text">Pick the right answer</div>
+        </div>
+
+        <!-- Hint -->
+        <div class="form-group hint-group">
+          <input type="text" name="hint" placeholder="Hint (optional) 💬">
+          <span class="hint-icon">💡</span>
+          <div class="hint-text">Add a small clue for learners</div>
+        </div>
+
+        <button type="submit" id="submitBtn">Submit Question</button>
+      </form>
+
+      <div class="result" id="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
